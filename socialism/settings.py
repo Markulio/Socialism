@@ -29,6 +29,7 @@ SECRET_KEY = ')#2$)a=e%esx#7)1-1ev!z=om^pt+aj3yr_-g)2zc)$+^r=s1_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+THUMBNAIL_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
+    'images',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE_CLASSES = [
