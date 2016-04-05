@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -56,6 +57,24 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+    'social.backends.facebook.Facebook2OAuth2',
+    'social.backends.twitter.TwitterOAuth',
+    )
+
+SOCIAL_AUTH_FACEBOOK_KEY = '152095541852246'
+SOCIAL_AUTH_FACEBOOK_SECRET = '0c682d04ba93c66bcd37b9b036df1f25'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_TWITTER_KEY = 'vrbwpe9PW1PA8eRRnxwe2t7Cb'
+SOCIAL_AUTH_TWITTER_SECRET = 'QWrIy4k9hthp1hQzOLDBAceRwGYBhvJchadtQHf3F2biCtS3WH'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ''
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ''
+
 
 ROOT_URLCONF = 'socialism.urls'
 
