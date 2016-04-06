@@ -42,6 +42,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 INSTALLED_APPS = [
     'account',
+    'images',
+    'sorl.thumbnail',
+    'actions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,8 +52,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'social.apps.django_app.default',
-    'images',
-    'sorl.thumbnail',
 ]
 
 MIDDLEWARE_CLASSES = [
